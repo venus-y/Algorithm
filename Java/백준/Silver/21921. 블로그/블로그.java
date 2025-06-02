@@ -38,9 +38,9 @@ public class Main {
 
     // 레코드를 순회하며 최대 방문자 횟수를 구한다.
     for (int i = X; i < N; i++) {
-      if (i == 1) {
-        continue;
-      }
+//      if (i == 1) {
+//        continue;
+//      }
       currentVisitorCount = currentVisitorCount - records[lPointer++] + records[rPointer++];
       if (maxVisitorCount == currentVisitorCount) {
         countPeriod++;
@@ -51,10 +51,10 @@ public class Main {
       }
     }
 
-    if (X == 1) {
-      maxVisitorCount = Math.max(maxVisitorCount,
-          currentVisitorCount - records[lPointer] + records[rPointer]);
-    }
+//    if (X == 1) {
+//      maxVisitorCount = Math.max(maxVisitorCount,
+//          currentVisitorCount - records[lPointer] + records[rPointer]);
+//    }
 
     if (maxVisitorCount == 0) {
       System.out.println("SAD");
